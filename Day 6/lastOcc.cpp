@@ -2,19 +2,19 @@
 #include <vector>
 using namespace std;
 
-int firstOcc(vector<int> &arr, int target, int size)
+int lastOcc(vector<int> &arr, int target, int size)
 {
     int start = 0;
     int end = size - 1;
     int mid = start + (end - start) / 2;
-    int ans =0;
+    int ans = 0;
 
     while (start <= end)
     {
         if (arr[mid] == target)
         {
-            ans= mid;
-            end = mid - 1;
+            ans = mid;
+            start = mid + 1;
         }
         else if (arr[mid] > target)
         {
@@ -40,9 +40,9 @@ int main()
     cout << "Enter your target : ";
     cin >> target;
 
-    int occ = firstOcc(arr, target, size);
+    int occ = lastOcc(arr, target, size);
 
-    cout << "First occ at index number = " << occ;
+    cout << "Last occ at index number = " << occ;
 
     return 0;
 }
