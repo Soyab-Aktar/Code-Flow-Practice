@@ -8,11 +8,11 @@ int main()
 
     for (int i = 0; i < num; i++)
     {
-        for (int j = 0; j < num-i; j++)
+        for (int j = 0; j < num - i; j++)
         {
             cout << i << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
 
     return 0;
