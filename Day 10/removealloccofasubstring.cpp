@@ -11,8 +11,6 @@ string removech(string name, string part)
     return name;
 }
 
-
-
 int main()
 {
     string name;
