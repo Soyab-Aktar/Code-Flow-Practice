@@ -3,14 +3,14 @@ using namespace std;
 
 bool checkpalindrome(string name, int left, int right)
 {
-    while (i <= j)
+    while (left <= right)
     {
-        if (str[i] != str[j])
+        if (name[left] != name[right])
         {
             return false;
         }
-        i++;
-        j--;
+        left++;
+        right--;
     }
     return true;
 }
